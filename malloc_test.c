@@ -2,15 +2,7 @@
 #include <unistd.h>
 #include <stdio.h>
 #include <stdlib.h>
-#include <time.h>
-
-// Example from OSTEP (cpu.c)
-void Spin(int seconds) {
-    int start = time(NULL);
-    while (time(NULL) - start < seconds) {
-    // Spin
-    }
-}
+#include "common.h"
 
 int main(int argc, char *argv[])
 {
@@ -22,5 +14,6 @@ int main(int argc, char *argv[])
 		*p = *p + 1;
 		printf("(%d) p: %d\n", getpid(), *p); // a4
 	}
+
 	return 0;
 }
