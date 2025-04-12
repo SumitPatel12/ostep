@@ -1,0 +1,2 @@
+Well, hello there, I'm sure you didn't forget about the parent process, (rc: 14734) (pid: 14733). x: 7
+Hello, I'm the child process (pid: 14734). x: 5
