@@ -5,16 +5,16 @@
 #include <sys/stat.h>
 #include <assert.h>
 
-inline double GetTime() {
+inline double get_time() {
     struct timeval t;
     int rc = gettimeofday(&t, NULL);
     assert(rc == 0);
     return (double) t.tv_sec + (double) t.tv_usec/1e6;
 }
 
-inline void Spin(int howlong) {
-    double t = GetTime();
-    while ((GetTime() - t) < (double) howlong);
+inline void spin(int howlong) {
+    double t = get_time();
+    while ((get_time() - t) < (double) howlong);
 }
 
 #endif
